@@ -302,6 +302,7 @@ defmodule Gold do
         {:ok, result}
       {:ok, %{status_code: code, body: body}} ->
         handle_error(code, body)
+      error -> error
     end
   end
 
