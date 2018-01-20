@@ -320,6 +320,8 @@ defmodule Gold do
         {:error, %{status: status, error: error, code: nil}}
       {:error, {:invalid, _token, _pos}} ->
         {:error, %{status: status, error: error, code: nil}}
+      {:error, error} ->
+        {:error, error}
     end
   end
 
